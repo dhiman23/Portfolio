@@ -24,6 +24,8 @@ jobs:
         run: pwd
       - name: List files
         run: ls -la
+      - name: s3 sync
+        run: aws s3 sync . s3://rushabhmarathistaticweb --delete 
       - name: upload files to S3
         run: aws s3 cp /home/runner/work/Portfolio/Portfolio/index.html s3://rushabhmarathistaticweb/index.html
       - name: Invalidate CloudFront cache
