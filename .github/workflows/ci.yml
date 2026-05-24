@@ -24,7 +24,5 @@ jobs:
         run: pwd
       - name: List files
         run: ls -la
-      - name: cd into Portfolio directory
-        run: cd "${GITHUB_WORKSPACE}/Portfolio"
       - name: upload files to S3
-        run: aws s3 cp index.html s3://rushabhmarathistaticweb/index.html
+        run: aws s3 cp /home/runner/work/Portfolio/Portfolio/index.html s3://rushabhmarathistaticweb/index.html
