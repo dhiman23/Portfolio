@@ -21,6 +21,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-region: ${{ secrets.AWS_REGION }}
       - name: cd into Portfolio directory
-        run: cd Portfolio
+        run: cd /Portfolio
       - name: upload files to S3
         run: aws s3 cp index.html s3://rushabhmarathistaticweb/index.html
